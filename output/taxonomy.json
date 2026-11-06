@@ -1,0 +1,182 @@
+{
+ "use_cases": [
+  {
+   "name": "Retail & E-commerce Customer Service",
+   "description": "Agent assists customers with retail orders (e.g., Amazon-style store) under a service policy: looking up orders, modifying or cancelling them, processing returns/exchanges, and updating account details.",
+   "workflows": [
+    {
+     "name": "Order lookup & status inquiry",
+     "description": "Identify the user, fetch order/product details, and answer questions about order status, items, or pricing."
+    },
+    {
+     "name": "Pending order modification",
+     "description": "Change items, quantities, or variants on a pending order, including price difference calculations."
+    },
+    {
+     "name": "Order cancellation",
+     "description": "Cancel a pending order per policy after verifying eligibility."
+    },
+    {
+     "name": "Returns & exchanges",
+     "description": "Process return of delivered order items or exchange delivered items for replacements."
+    },
+    {
+     "name": "Address & account updates",
+     "description": "Modify shipping address on a pending order or update the user's saved address/profile."
+    },
+    {
+     "name": "Escalation to human agent",
+     "description": "Transfer the customer to human agents when policy prohibits the agent from acting."
+    },
+    {
+     "name": "Other / unclear",
+     "description": "Retail service sessions with no tool calls or ambiguous intent."
+    }
+   ]
+  },
+  {
+   "name": "Airline & Travel Customer Service",
+   "description": "Agent manages flight reservations under an airline policy: searching flights, booking, changing or cancelling reservations, checking flight status, and handling compensation.",
+   "workflows": [
+    {
+     "name": "Flight search & booking",
+     "description": "Search direct/one-stop flights, quote prices, and book new reservations."
+    },
+    {
+     "name": "Reservation changes",
+     "description": "Update reservation flights, passengers, or baggage; rebooking and seat/cabin changes."
+    },
+    {
+     "name": "Reservation cancellation & compensation",
+     "description": "Cancel reservations and issue certificates or refunds where policy allows."
+    },
+    {
+     "name": "Flight status & itinerary inquiry",
+     "description": "Check flight status, retrieve reservation details, and answer itinerary questions."
+    },
+    {
+     "name": "Escalation to human agent",
+     "description": "Transfer to human agents for requests outside agent permissions."
+    },
+    {
+     "name": "Other / unclear",
+     "description": "Airline service sessions with no tool calls or indeterminate task type."
+    }
+   ]
+  },
+  {
+   "name": "Telecom Customer Service",
+   "description": "Agent supports telecom subscribers: managing lines, roaming, data, billing, payments, and device/network configuration issues.",
+   "workflows": [
+    {
+     "name": "Line & roaming management",
+     "description": "Enable/disable roaming, suspend/resume lines, and refuel data plans."
+    },
+    {
+     "name": "Billing & payment requests",
+     "description": "Fetch bills, review charges, and send payment requests to customers."
+    },
+    {
+     "name": "Account & usage inquiry",
+     "description": "Look up customers by phone/ID/name and report data usage or line details."
+    },
+    {
+     "name": "Device configuration & troubleshooting",
+     "description": "Diagnose and fix device issues: APN, VPN, Wi-Fi calling, SIM status, app permissions, network mode."
+    },
+    {
+     "name": "Escalation to human agent",
+     "description": "Transfer to human agents when requests exceed agent authority."
+    }
+   ]
+  },
+  {
+   "name": "Agentic Shopping & Checkout",
+   "description": "Autonomous shopping agents act on behalf of a shopper in storefront environments: discovering products, managing carts, completing checkout and payments, including delegated-payment (mandate) protocols and marketplace account operations.",
+   "workflows": [
+    {
+     "name": "Product search & comparison",
+     "description": "Search catalogs, retrieve product details, and compare options to find matching items."
+    },
+    {
+     "name": "Cart creation & management",
+     "description": "Create carts, add/update/remove lines, and apply discounts."
+    },
+    {
+     "name": "Checkout & order placement",
+     "description": "Start/complete checkout, set contact and shipping details, tokenize payment, and place the order."
+    },
+    {
+     "name": "Delegated payments & mandates",
+     "description": "Negotiate intent/cart/payment mandates, obtain payment credentials, and sign/execute mandates on the user's device."
+    },
+    {
+     "name": "Checkout & cart cancellation",
+     "description": "Cancel checkout sessions or carts and abandon/redo purchases."
+    },
+    {
+     "name": "Marketplace account & personalization",
+     "description": "Amazon-style operations: manage addresses, payment cards, wish lists, browsing history, and promo codes."
+    }
+   ]
+  },
+  {
+   "name": "Information Research & Question Answering",
+   "description": "Agents answer factual questions by searching documents or the web, expanding/retrieving sources, analyzing structured data, and submitting a structured final answer.",
+   "workflows": [
+    {
+     "name": "Search-based question answering",
+     "description": "Iteratively search, retrieve and read documents, then submit the final answer (e.g., names, titles, facts)."
+    },
+    {
+     "name": "Multi-source data extraction & analysis",
+     "description": "Combine PDF extraction, SQLite queries, filesystem search, and code execution to compute an answer."
+    },
+    {
+     "name": "Other / unclear",
+     "description": "Research-style tasks with minimal tool use or unclear information needs."
+    }
+   ]
+  },
+  {
+   "name": "Software Engineering & Coding Tasks",
+   "description": "Agents solve programming tasks in a computer-use/shell environment: exploring repositories, editing code, running commands, and finishing with a verified solution.",
+   "workflows": [
+    {
+     "name": "Shell-based programming task",
+     "description": "Solve a task via iterative single bash commands with reasoning, then finish."
+    },
+    {
+     "name": "Repo exploration & multi-step implementation",
+     "description": "Use file tools (read/edit/grep), task planning, and shell execution to implement or fix code."
+    },
+    {
+     "name": "Other / unclear",
+     "description": "Coding sessions with no recorded tool calls or unclear objectives."
+    }
+   ]
+  },
+  {
+   "name": "Personal Productivity & App Automation",
+   "description": "Agents execute personal-assistant tasks across consumer apps on behalf of a supervisor: media playlists, notes, peer-to-peer payments, and account lookups.",
+   "workflows": [
+    {
+     "name": "Media & playlist management",
+     "description": "Spotify operations: filter songs across playlists, create playlists, reset/shuffle/play queues."
+    },
+    {
+     "name": "Notes & personal data queries",
+     "description": "Log into note apps and answer questions from personal notes (e.g., bucket list status)."
+    },
+    {
+     "name": "P2P payments management",
+     "description": "Review Venmo transactions and create/correct/delete payment requests."
+    },
+    {
+     "name": "Account credentials & profile lookup",
+     "description": "Retrieve account passwords or profile info to support cross-app tasks."
+    }
+   ]
+  }
+ ]
+}
